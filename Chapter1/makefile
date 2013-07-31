@@ -1,7 +1,8 @@
-all:hello
+PROGS = hello
+all: ${PROGS}
 
 hello:Hello.o
 	g++ -Wall -o ./bin/$@ $<
 
 clean:
-	rm -f *.o 
+	rm -f *.o ./bin/${PROGS}
