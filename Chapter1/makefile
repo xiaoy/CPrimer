@@ -1,7 +1,10 @@
-PROGS = hello
+PROGS = hello reverse
 all: ${PROGS}
 
 hello:Hello.o
+	g++ -Wall -o ./bin/$@ $<
+
+reverse:reverse.o
 	g++ -Wall -o ./bin/$@ $<
 
 clean:
