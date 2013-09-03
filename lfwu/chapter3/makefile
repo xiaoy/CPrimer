@@ -1,7 +1,6 @@
 include ../Make.Defines
 CXXPROGS= 4strcmp 5strconcat 6strupper 10delpunct 17vecupper \
-		  arr
-
+		  arr 20pairsum
 all:${CXXPROGS}
 
 4strcmp : 4strcmp.o
@@ -20,6 +19,9 @@ all:${CXXPROGS}
 	${CXX} ${CXXFLAGS} -o $@ $<
 
 arr : arr.o
+	${CXX} ${CXXFLAGS} -o $@ $<
+
+20pairsum : 20pairsum.o
 	${CXX} ${CXXFLAGS} -o $@ $<
 
 clean:
