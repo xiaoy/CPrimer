@@ -10,15 +10,19 @@
 #include <vector>
 using namespace std;
 
-void PrintVec(vector<string>& str_list, vector<string>::iterator it) {
-    if(it != str_list.end()) {
+void PrintVec(vector<string>& str_list) {
+    cout<<"In function "<<__func__<<" line "<<__LINE__;
+    cout<<" vector size is "<<str_list.size()<<endl;
+    auto it = begin(str_list);
+    if(it != end(str_list)) {
         cout<<*it<<endl;
         it++;
-        PrintVec(str_list, it);
+        vector<string> str_list_new(it, str_list.end());
+        PrintVec(str_list_new);
     }
 }
 int
 main(int argc, char** argv){
     vector<string> str_list = {"hello", "world"};
-    PrintVec(str_list, begin(str_list));
+    PrintVec(str_list);
 }
