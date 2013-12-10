@@ -1,15 +1,15 @@
 include ../Make.Defines
-PROGS=1readstr 4readfile 5readword
+
+PROGS = 1readstr.exe 4readfile.exe 5readword.exe 6_read_transaction.exe \
+		7_rw_transaction.exe 8_rw_transaction.exe 9_print_stringstream.exe \
+		10_read_file.exe
+
 all:${PROGS}
 
-1readstr : 1readstr.o
+%.exe : %.o
 	${CXX} ${CXXFLAGS} -o $@ $<
-
-4readfile : 4readfile.o
-	${CXX} ${CXXFLAGS} -o $@ $<
-
-5readfile : 5readfile.o
-	${CXX} ${CXXFLAGS} -o $@ $<
+%.o : %.cc
+	${CXX} ${CXXFLAGS} -c $< -o $@
 
 clean:
-	rm -f *.o ${PROGS}
+	rm -f ${PROGS}
