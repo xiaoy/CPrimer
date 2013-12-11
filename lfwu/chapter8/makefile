@@ -2,7 +2,7 @@ include ../Make.Defines
 
 PROGS = 1readstr.exe 4readfile.exe 5readword.exe 6_read_transaction.exe \
 		7_rw_transaction.exe 8_rw_transaction.exe 9_print_stringstream.exe \
-		10_read_file.exe
+		10_read_file.exe 11_read_file.exe 13_format_str.exe
 
 all:${PROGS}
 
