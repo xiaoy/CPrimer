@@ -1,12 +1,13 @@
 include ../../base/Make.Defines
 
-CXXPROGS= \
+CXXPROGS= arrayone 
 
 all:${CXXPROGS}
 
-arrayone :arrayone.o
+
+
+
+arrayone:arrayone.o 
 	${CXX} ${CXXFLAGS} -o $@ $<
-
-
 clean:
 	rm -f -r *.o ${CXXPROGS}
