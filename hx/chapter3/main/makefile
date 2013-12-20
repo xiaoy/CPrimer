@@ -1,4 +1,4 @@
-include ../../Make.Defines
+include ../../base/Make.Defines
 
 CXXPROGS=limits arith exceed hexoct \
 	chartype floatnum modulus assign \

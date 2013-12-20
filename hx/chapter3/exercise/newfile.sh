@@ -8,6 +8,6 @@ fi
 if [ ! -f "$1" ]
 then
     touch $1
-    . ../../title.sh>>$1
+    . ../../base/title.sh>>$1
 fi
 
