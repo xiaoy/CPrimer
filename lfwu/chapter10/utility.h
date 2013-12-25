@@ -16,6 +16,18 @@ void PrintContainer(T& con, char det= ' ') {
         cout << *it << det;
 }
 
+template <class T>
+void PrintContainer(const T& begin, const T& end, char det= ' ') {
+    for(auto it = begin; it != end; ++it)
+        cout << *it << det;
+}
+
+template <class T>
+void PrintContainer(T& begin, T& end, char det= ' ') {
+    for(auto it = begin; it != end; ++it)
+        cout << *it << det;
+}
+
 template<class T>
 void CreateSeq(T& con, int start, int end) {
     while(start <= end) {
