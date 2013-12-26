@@ -30,11 +30,11 @@ main(int argc, char** argv){
     auto longer_end = partition(str_vec.begin(), str_vec.end(), IsLonger);
 
     cout << "longer:\n";
-    PrintContainer(str_vec.begin(), longer_end + 1);
+    PrintContainer(str_vec.begin(), longer_end);
     cout << endl;
 
     cout << "smaller:\n";
-    PrintContainer(longer_end + 1, str_vec.end());
+    PrintContainer(longer_end, str_vec.end());
     cout << endl;
 }
 
