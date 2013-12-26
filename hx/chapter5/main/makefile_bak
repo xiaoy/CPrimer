@@ -45,5 +45,7 @@ textin2:textin2.o
 	${CXX} ${CXXFLAGS} -o $@ $<
 textin3:textin3.o 
 	${CXX} ${CXXFLAGS} -o $@ $<
+test:test.o 
+	${CXX} ${CXXFLAGS} -o $@ $<
 clean:
 	rm -f -r *.o ${CXXPROGS}
