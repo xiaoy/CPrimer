@@ -13,7 +13,9 @@ then
 fi
 
 cp base/newfile.sh $1\/main/
+cp base/rmfile.sh $1\/main/
 cp base/makefile $1\/main/
 cp base/newfile.sh $1\/exercise/
+cp base/rmfile.sh $1\/exercise/
 cp base/makefile $1\/exercise/
 

@@ -1,6 +1,6 @@
 include ../../base/Make.Defines
 
-CXXPROGS= forloop express formore bigstep forstr1 plus_one block block2 forstr2 equal compstr1 compstr2 while waitting dowhile foreach textin1 textin1 textin1 textin2 textin3 test test test 
+CXXPROGS= forloop express formore bigstep forstr1 plus_one block block2 forstr2 equal compstr1 compstr2 while waitting dowhile foreach textin1 textin1 textin1 textin2 textin3       test2 test3 
 
 all:${CXXPROGS}
 
@@ -44,6 +44,10 @@ textin1:textin1.o
 textin2:textin2.o 
 	${CXX} ${CXXFLAGS} -o $@ $<
 textin3:textin3.o 
+	${CXX} ${CXXFLAGS} -o $@ $<
+test2:test2.o 
+	${CXX} ${CXXFLAGS} -o $@ $<
+test3:test3.o 
 	${CXX} ${CXXFLAGS} -o $@ $<
 clean:
 	rm -f -r *.o ${CXXPROGS}
