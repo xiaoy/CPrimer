@@ -48,7 +48,8 @@ WordTransform(fstream& map_file, fstream& input) {
     string line;
     while(getline(input, line)) {
         bool first_word = false;
-        istringstream in(line);
+        istringstream in(line);#include <iostream>
+
         string word;
         while(in >> word) {
             if(!first_word) {
