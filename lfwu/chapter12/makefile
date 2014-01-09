@@ -1,6 +1,6 @@
 include ../Make.Defines
 
-PROGS= 6_print_vec.exe 7_print_vec.exe
+PROGS= 6_print_vec.exe 7_print_vec.exe 14_shared_del.exe
 
 all:${PROGS}
 
