@@ -20,8 +20,6 @@ StrBlob::StrBlob(initializer_list<string> li):
 }
 
 StrBlob::~StrBlob() {
-    cout << "StrBlog desconstructor is called\n";
-    cout << data_.use_count() << endl;
 }
 
 void StrBlob::PushBack(const std::string& str) {
