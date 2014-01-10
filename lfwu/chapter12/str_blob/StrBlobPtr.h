@@ -18,9 +18,10 @@ public:
 
     std::string& DeRef() const;
     StrBlobPtr& Incr();
+    bool IsEnd();
+private:
     std::shared_ptr<std::vector<std::string>>
         Check(std::size_t, const std::string& msg) const;
-private:
     std::weak_ptr<std::vector<std::string>> wptr_;
     std::size_t curr_;
 };

@@ -10,7 +10,8 @@
 #include <iostream>
 using namespace std;
 
-StrBlob::StrBlob() {
+StrBlob::StrBlob():
+                    data_(make_shared<vector<string>>()){
 
 }
 

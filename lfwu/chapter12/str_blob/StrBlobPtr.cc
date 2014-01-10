@@ -22,6 +22,11 @@ StrBlobPtr::Incr() {
     return *this;
 }
 
+bool
+StrBlobPtr::IsEnd() {
+    auto ret = wptr_.lock();
+    return ret == nullptr || curr_ >= ret->size();
+}
 shared_ptr<vector<string>>
 StrBlobPtr::Check(size_t i, const string& msg) const {
     auto ret = wptr_.lock();
