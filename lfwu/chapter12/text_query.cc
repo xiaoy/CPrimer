@@ -14,7 +14,6 @@
 #include <map>
 using namespace std;
 
-static const char SYMBOLS[] = {',', ';', ':', ',', '"', '\''};
 struct WordInfo{
     size_t times;
     set<size_t> lines;
@@ -67,10 +66,11 @@ main(int argc, char** argv){
             cout << "can not find " << find_word << endl;
         }else{
             WordInfo info = it->second;
-            cout << "find the word \"" << find_word << "\" times:" << info.times << endl;
+            cout << "find the word \"" << find_word << "\" "
+                 << info.times << " times" << endl;
             cout << "the result is:\n";
             for(auto l_it : info.lines) {
-                cout << (l_it + 1) << "\t" <<line_vec[l_it] << endl;
+                cout << "\t(line "<< (l_it + 1) << ")" <<line_vec[l_it] << endl;
             }
         }
         cout << "input the word you want query:";
