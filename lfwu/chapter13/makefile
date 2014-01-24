@@ -1,6 +1,6 @@
 include ../Make.Defines
 
-PROGS=14_numbered.exe 29_has_ptr.exe
+PROGS=14_numbered.exe 29_has_ptr.exe 30_has_ptr.exe 31_has_ptr_sort.exe
 
 all:${PROGS}
 
