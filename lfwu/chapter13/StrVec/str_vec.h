@@ -3,6 +3,7 @@
 #include <string>
 #include <memory>
 #include <utility>
+#include <initializer_list>
 
 class StrVec{
 public:
@@ -11,10 +12,20 @@ public:
     {
     }
 
+    StrVec(std::initializer_list<std::string> ls):
+        elements_(nullptr),first_free_(nullptr),cap_(nullptr)
+    {
+        for(auto it : ls) {
+            push_back(it);
+        }
+    }
+
     StrVec(const StrVec&);
     StrVec& operator=(const StrVec&);
     ~StrVec();
     void push_back(const std::string&);
+    void reserve(size_t);
+    void resize(size_t);
     size_t size() const { return first_free_ - elements_; }
     size_t capacity() const { return cap_ - elements_; }
     std::string* begin() const { return elements_; }
