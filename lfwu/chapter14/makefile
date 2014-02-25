@@ -1,6 +1,6 @@
 include ../Make.Defines
 
-PROGS= 44_calculator.exe
+PROGS= 44_calculator.exe 34_getBigger.exe 37_replace.exe
 
 all:${PROGS}
 

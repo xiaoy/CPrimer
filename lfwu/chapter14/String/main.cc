@@ -11,8 +11,22 @@ using namespace std;
 
 int
 main(int argc, char** argv){
-    MyString mStr("i like c++");
+    MyString ms1("i like c++");
 
-    cin >>mStr;
-    cout << mStr << endl;
+    //cin >> ms1;
+    //cout << ms1<< endl;
+
+    MyString ms2 = "i like c++";
+    cout << (ms1 == ms2) << endl;
+
+    MyString ms3 = "i like g++";
+    cout << (ms1 != ms3) << endl;
+    cout << (ms1 != ms2) << endl;
+    cout << (ms1 > ms2) << endl;
+    cout << (ms1 > ms3) << endl;
+    cout << (ms3 >= ms1) << endl;
+
+    cout << (ms1[2]) << endl;
+    cout << ms1 + ms3 << endl;
+    cout << (ms1 += ms3) << endl;
 }

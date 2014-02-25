@@ -32,6 +32,9 @@ public:
     bool operator>(const MyString&);
     bool operator>=(const MyString&);
     bool operator<=(const MyString&);
+    MyString& operator+=(const MyString&);
+    MyString operator+(const MyString&);
+    char operator[](size_t index);
 
     char* begin() const { return element_; }
     char* end() const { return first_free_; }
